@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, View, Text, ImageBackground } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+
 
 function HomeScreen({ navigation }) {
   return (
@@ -51,6 +52,12 @@ function Cadastro() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Profile Screen</Text>
+
+      <ImageBackground  
+    source={require('./assets/escola1.jpg')} 
+    style={{  width: 1800, height: 850, justifyContent: 'center', alignItems: 'center',}}>
+      <Button title="Left button" onPress={() => Alert.alert('Left button pressed')} />
+    </ImageBackground>
     </View>
   );
 }
